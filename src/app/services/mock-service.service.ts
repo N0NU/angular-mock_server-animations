@@ -17,6 +17,6 @@ export class MockServiceService {
   }
 
   deleteCard(id){
-    return this.http.delete('http://localhost:3000/cards', id);
+    return this.http.delete('http://localhost:3000/cards/'+id);
   }
 }

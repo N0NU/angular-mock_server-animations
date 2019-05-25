@@ -1,13 +1,16 @@
-<mat-grid-list *ngIf="cards" cols="3" >
+<button (click)="addCard()" style="margin: 1rem" mat-stroked-button>
+  <mat-icon>library_add</mat-icon> Add Card
+</button>
+<mat-grid-list *ngIf="cards" [cols]="breakpoint" (window:resize)="onResize($event)" >
   <mat-grid-tile 
   *ngFor="let card of cards">
   <div >
-      <mat-card [@slideIn]="slideInState">
+      <mat-card [@fadeInOut]>
         {{card.id}}<br/>
         {{card.title}}<br/>
         {{card.author}}
         <mat-card-actions>
-            <button mat-icon-button>
+            <button (click)="deleteCard(card.id)" mat-icon-button>
                 <mat-icon>delete</mat-icon>
               </button>
           </mat-card-actions>
