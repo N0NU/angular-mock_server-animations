@@ -1,3 +1,18 @@
-<p>
-  main-page works!
-</p>
+<mat-grid-list *ngIf="cards" cols="3" >
+  <mat-grid-tile 
+  *ngFor="let card of cards">
+  <div >
+      <mat-card [@slideIn]="slideInState">
+        {{card.id}}<br/>
+        {{card.title}}<br/>
+        {{card.author}}
+        <mat-card-actions>
+            <button mat-icon-button>
+                <mat-icon>delete</mat-icon>
+              </button>
+          </mat-card-actions>
+      </mat-card>
+      </div>
+</mat-grid-tile>
+  
+</mat-grid-list>
