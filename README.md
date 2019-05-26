@@ -1,20 +1,25 @@
 #json-server
+
 The project has used json-server npm library as a mock server for generating mock APIs, GET DELETE and POST request are used.
 To run json-server `npm install -g json-server` it will install the json-server globally then create a json file in your angular or react root directory, from there through cmd run `json-server your_json_file_name.json` this will start the server for example there is mock_data.json file in this repo so I will use command `json-server mock_data.json` to run the server.
 
 #APIs
+
 GET http://localhost:3000/cards to fetch all cards
 DELETE http://localhost:3000/cards/card_id to delete certain card
 POST http://localhost:3000/cards data in req body to add card
 
 #Angular Material
+
 Angular Material is an angular liberary of pre built cool elements. I have used Mat toolbar module of header bar, Mat Card module to show data,  Mat grid list module to arrange data in grid format, Mat icon module for icons and Mat button module. 
 
 #Angular Animations
+
 I have used fadeinout angular animation, so whenever a card is added or deleted, it will refresh the list and list will fade in to the frontend
 
 #How to Use
-First clone or download the repo, then run `npm install` in the clone directory to install dependencies. After installation completes run `ng serve`.
+
+First clone or download the repo, then run `npm install` in the clone directory to install dependencies then you have to install json-server using `npm install -g json-server`. After installation completes create a any_name.json file in the root folder and insert some records in it, for example there is mock_data.json file in the root of this repo then run `json-server your_fileName.json` then in new terminal run `ng serve`.
 
 # AngularApp
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
