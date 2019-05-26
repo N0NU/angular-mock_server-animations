@@ -26,6 +26,8 @@ breakpoint = 3;
 
   ngOnInit() {
     this.getCards();
+
+    //to resize the gridlist column based on the current screen size
     if(window.innerWidth <= 400){
       this.breakpoint = 1
     }else if(window.innerWidth <= 600){
@@ -58,6 +60,7 @@ breakpoint = 3;
   }
 
   addCard(){
+    //if no card is there in the array then assign 1 to the id
     var id = (this.cards.length)? this.cards[this.cards.length-1].id +1 : 1;
     var data = {
       id: id,
@@ -74,12 +77,14 @@ breakpoint = 3;
     })
   }
 
+  //snackbar to show user messages
   snackBarMessage(msg){
     this.snackBar.open(msg,'', {
       duration: 2000,
     });
   }
 
+    //to resize the gridlist column if the screen is re-sized
   onResize(event) {
     if(event.target.innerWidth <= 400){
       this.breakpoint = 1
